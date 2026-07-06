@@ -72,7 +72,7 @@ export default function ContactPage() {
           <div className="flex justify-center">
 
             <Image
-              src="/public/images/Gallery/team 1.png"
+              src="/images/Gallery/team 1.png"
               alt="Hi Spring Team"
               width={650}
               height={700}
