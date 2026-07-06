@@ -58,23 +58,23 @@ const galleryImages = [
     title: "Office Installation",
   },
   {
-    src: "/public/images/Gallery/home installation.png",
+    src: "/public/images/Gallery/home.png",
     title: "Home Installation",
   },
   {
-    src: "/public/images/Gallery/hotel.png",
+    src: "/public/images/Gallery/hotels.png",
     title: "Hotels",
   },
   {
-    src: "/public/images/Gallery/school.png",
+    src: "/public/images/Gallery/schools.png",
     title: "Schools",
   },
   {
-    src: "/public/images/Gallery/rural.png",
+    src: "/public/images/Gallery/rurals.png",
     title: "Supporting Rural Communities",
   },
   {
-    src: "/public/images/Gallery/rural 2.png",
+    src: "/public/images/Gallery/rurals 2.png",
     title: "Community Water Access",
   },
   {
