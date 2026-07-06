@@ -14,13 +14,13 @@ const galleryImages = [
   { src: "/images/Gallery/loading.PNG", title: "Loading for Distribution" },
   { src: "/images/Gallery/truck.PNG", title: "Transportation Fleet" },
   { src: "/images/Gallery/delivered.PNG", title: "Delivered to Customers" },
-  { src: "/images/Gallery/office installation.PNG", title: "Office Installation" },
-  { src: "/images/Gallery/home installation.PNG", title: "Home Installation" },
-  { src: "/images/Gallery/hotel.PNG", title: "Hotels" },
-  { src: "/images/Gallery/school.PNG", title: "Schools" },
-  { src: "/images/Gallery/rural.PNG", title: "Supporting Rural Communities" },
-  { src: "/images/Gallery/rural 2.PNG", title: "Community Water Access" },
-  { src: "/images/Gallery/team 1.PNG", title: "The Hi Spring Team" },
+  { src: "/images/Gallery/office installation.png", title: "Office Installation" },
+  { src: "/images/Gallery/home installation.png", title: "Home Installation" },
+  { src: "/images/Gallery/hotel.png", title: "Hotels" },
+  { src: "/images/Gallery/school.png", title: "Schools" },
+  { src: "/images/Gallery/rural.png", title: "Supporting Rural Communities" },
+  { src: "/images/Gallery/rural 2.png", title: "Community Water Access" },
+  { src: "/images/Gallery/team 1.png", title: "The Hi Spring Team" },
 ];
 
 export default function GalleryPage() {
