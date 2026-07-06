@@ -10,7 +10,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-blue-100 shadow-lg">
+    <nav className="sticky top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-xl border-b border-blue-100 shadow-lg">
 
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 h-20 lg:h-24">
 
