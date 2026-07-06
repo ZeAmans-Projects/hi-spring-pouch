@@ -16,7 +16,7 @@ const galleryImages = [
   { src: "/images/Gallery/delivered.PNG", title: "Delivered to Customers" },
   { src: "/images/Gallery/office installation.png", title: "Office Installation" },
   { src: "/images/Gallery/home installation.png", title: "Home Installation" },
-  { src: "/images/Gallery/hotel.png", title: "Hotels" },
+  { src: "/images/Gallery/hotels.png", title: "Hotels" },
   { src: "/images/Gallery/school.png", title: "Schools" },
   { src: "/images/Gallery/rural.png", title: "Supporting Rural Communities" },
   { src: "/images/Gallery/rural 2.png", title: "Community Water Access" },
