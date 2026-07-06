@@ -39,7 +39,7 @@ export default function SustainabilityPage() {
           <div className="flex justify-center">
 
             <Image
-              src="/images/Gallery/rural.PNG"
+              src="/public/images/Gallery/rurals.png"
               alt="Community Support"
               width={650}
               height={700}
