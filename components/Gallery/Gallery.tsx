@@ -66,7 +66,7 @@ const galleryImages = [
     title: "Hotels",
   },
   {
-    src: "/public/images/Gallery/school.png",
+    src: "/images/Gallery/school.png",
     title: "Schools",
   },
   {
