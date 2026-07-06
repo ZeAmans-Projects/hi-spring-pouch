@@ -58,27 +58,27 @@ const galleryImages = [
     title: "Office Installation",
   },
   {
-    src: "/public/images/Gallery/home.png",
+    src: "/public/images/Gallery/home installation.png",
     title: "Home Installation",
   },
   {
-    src: "/public/images/Gallery/hotels.png",
+    src: "/public/images/Gallery/hotel.png",
     title: "Hotels",
   },
   {
-    src: "/public/images/Gallery/schools.png",
+    src: "/public/images/Gallery/school.png",
     title: "Schools",
   },
   {
-    src: "/public/images/Gallery/rurals.png",
+    src: "/public/images/Gallery/rural.png",
     title: "Supporting Rural Communities",
   },
   {
-    src: "/public/images/Gallery/rurals 2.png",
+    src: "/public/images/Gallery/rural 2.png",
     title: "Community Water Access",
   },
   {
-    src: "/public/images/Gallery/team 1.png",
+    src: "/images/Gallery/team 1.PNG",
     title: "The Hi Spring Team",
   },
 ];
