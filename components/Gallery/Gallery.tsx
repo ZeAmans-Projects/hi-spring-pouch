@@ -54,7 +54,7 @@ const galleryImages = [
     title: "Delivered to Customers",
   },
   {
-    src: "/images/Gallery/office installation.PNG",
+    src: "/images/Gallery/office.png",
     title: "Office Installation",
   },
   {
