@@ -31,7 +31,7 @@ export default function SustainabilityPage() {
 
           <div className="flex justify-center">
             <Image
-              src="/images/Gallery/rurals.png"
+              src="/images/Gallery/rural.png"
               alt="Community Support"
               width={650}
               height={700}
@@ -122,7 +122,7 @@ export default function SustainabilityPage() {
       <section className="py-28 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-20 items-center">
           <Image
-            src="/images/Gallery/rurals 2.png"
+            src="/images/Gallery/rural 2.png"
             alt="Community"
             width={650}
             height={700}
