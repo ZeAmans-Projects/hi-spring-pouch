@@ -156,10 +156,11 @@ export default function SustainabilityPage() {
             Together We Can Build A Healthier Future
           </h2>
 
-          <p className="mt-8 text-xl text-blue-100 leading-9">
-            Learn more about Hi Spring or contact us to discuss partnerships,
-            distribution opportunities and bulk supply.
-          </p>
+          <p className="mt-8 text-xl text-white leading-9">
+  Learn more about Hi Spring or contact us to discuss
+  partnerships, distribution opportunities and bulk
+  supply.
+</p>
 
           <div className="mt-12 flex justify-center gap-6 flex-wrap">
             <Link href="/contact">
