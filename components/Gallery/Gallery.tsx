@@ -54,31 +54,31 @@ const galleryImages = [
     title: "Delivered to Customers",
   },
   {
-    src: "/images/Gallery/office installation.PNG",
+    src: "/images/Gallery/office installation.png",
     title: "Office Installation",
   },
   {
-    src: "/images/Gallery/home installation.PNG",
+    src: "/images/Gallery/home installation.png",
     title: "Home Installation",
   },
   {
-    src: "/images/Gallery/hotel.PNG",
+    src: "/images/Gallery/hotel.png",
     title: "Hotels",
   },
   {
-    src: "/images/Gallery/school.PNG",
+    src: "/images/Gallery/school.png",
     title: "Schools",
   },
   {
-    src: "/images/Gallery/rural.PNG",
+    src: "/images/Gallery/rural.png",
     title: "Supporting Rural Communities",
   },
   {
-    src: "/images/Gallery/rural 2.PNG",
+    src: "/images/Gallery/rural 2.png",
     title: "Community Water Access",
   },
   {
-    src: "/images/Gallery/team 1.PNG",
+    src: "/images/Gallery/team 1.png",
     title: "The Hi Spring Team",
   },
 ];
