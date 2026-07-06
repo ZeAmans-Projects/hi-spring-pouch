@@ -16,30 +16,28 @@ export default function Navbar() {
 
         {/* Logo */}
 
-        <Link href="/" className="flex items-center gap-3 lg:gap-4">
+        <Link href="/" className="flex items-center gap-2 sm:gap-3 lg:gap-4">
 
-          <Image
-            src="/logos/logo.PNG"
-            alt="Hi Spring Logo"
-            width={180}
-            height={70}
-            priority
-            className="h-10 sm:h-12 lg:h-14 w-auto object-contain"
-          />
+  <Image
+    src="/logos/logo.PNG"
+    alt="Hi Spring Logo"
+    width={200}
+    height={80}
+    priority
+    className="h-12 sm:h-12 lg:h-14 w-auto object-contain shrink-0"
+  />
 
-          <div>
+  <div>
+    <h1 className="text-lg sm:text-2xl lg:text-3xl font-black text-blue-700 leading-none">
+      Hi Spring
+    </h1>
 
-            <h1 className="text-xl sm:text-2xl lg:text-3xl font-black text-blue-700 leading-none">
-              Hi Spring
-            </h1>
+    <p className="hidden sm:block text-[10px] lg:text-xs tracking-[0.2em] uppercase text-gray-500 mt-1">
+      MGF Industries PLC
+    </p>
+  </div>
 
-            <p className="hidden sm:block text-[10px] lg:text-xs tracking-[0.2em] lg:tracking-[0.25em] uppercase text-gray-500 mt-1">
-              MGF Industries PLC
-            </p>
-
-          </div>
-
-        </Link>
+</Link>
 
         {/* Desktop Menu */}
 
