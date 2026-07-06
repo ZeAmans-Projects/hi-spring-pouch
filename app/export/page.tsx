@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import Button from "@/components/ui/Button";
 
 export default function ExportPage() {
@@ -7,105 +7,177 @@ export default function ExportPage() {
     <main>
 
       {/* Hero */}
-      <section className="bg-blue-800 text-white py-24">
-        <div className="max-w-7xl mx-auto px-8 text-center">
 
-          <h1 className="text-5xl font-bold">
-            Export & B2B Partnerships
-          </h1>
+      <section className="bg-gradient-to-br from-blue-50 to-white py-24">
 
-          <p className="mt-6 text-xl max-w-3xl mx-auto">
-            Delivering premium Ethiopian natural mineral water to businesses,
-            institutions and international markets.
-          </p>
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-16 items-center">
+
+          <div>
+
+            <span className="inline-flex rounded-full bg-blue-100 text-blue-700 px-5 py-2 font-semibold">
+              International Export
+            </span>
+
+            <h1 className="mt-8 text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-gray-900">
+
+              Delivering Ethiopian
+              <span className="text-blue-700"> Quality Worldwide</span>
+
+            </h1>
+
+            <p className="mt-8 text-lg leading-9 text-gray-600">
+
+              Hi Spring proudly supplies premium bottled drinking water
+              beyond Ethiopia while continuously expanding our
+              international distribution network.
+
+            </p>
+
+          </div>
+
+          <Image
+            src="/images/Gallery/loading.PNG"
+            alt="Export Loading"
+            width={700}
+            height={750}
+            className="rounded-[35px] shadow-2xl object-cover"
+            priority
+          />
 
         </div>
+
       </section>
 
-      {/* Main Section */}
-      <section className="max-w-7xl mx-auto px-8 py-24 grid lg:grid-cols-2 gap-16 items-center">
+      {/* Export Capabilities */}
 
-        <div>
+      <section className="py-24 bg-white">
 
-          <h2 className="text-4xl font-bold">
-            Your Trusted Supply Partner
-          </h2>
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
-          <p className="mt-8 text-gray-600 leading-8">
-            Hi Spring supplies purified natural mineral water in innovative
-            Non-PVC Soft Bag Pouches for wholesalers, retailers,
-            humanitarian organizations, hospitals, institutions and
-            export distributors.
-          </p>
+          <div className="text-center">
 
-          <p className="mt-6 text-gray-600 leading-8">
-            Our production systems are designed for consistent quality,
-            reliable supply and international market requirements.
-          </p>
+            <span className="inline-flex rounded-full bg-blue-100 text-blue-700 px-5 py-2 font-semibold">
 
-          <div className="mt-10">
-            <Link href="/contact">
-              <Button>Become a Partner</Button>
-            </Link>
+              Export Capabilities
+
+            </span>
+
+            <h2 className="mt-6 text-5xl font-black text-gray-900">
+
+              Built For International Markets
+
+            </h2>
+
+          </div>
+
+          <div className="mt-20 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <div className="bg-slate-50 rounded-[30px] p-8">
+
+              <h3 className="text-2xl font-black text-blue-700">
+
+                Bulk Supply
+
+              </h3>
+
+              <p className="mt-5 text-gray-600 leading-8">
+
+                Reliable large-volume production for international buyers.
+
+              </p>
+
+            </div>
+
+            <div className="bg-slate-50 rounded-[30px] p-8">
+
+              <h3 className="text-2xl font-black text-blue-700">
+
+                Modern Production
+
+              </h3>
+
+              <p className="mt-5 text-gray-600 leading-8">
+
+                Advanced purification and hygienic bottling processes.
+
+              </p>
+
+            </div>
+
+            <div className="bg-slate-50 rounded-[30px] p-8">
+
+              <h3 className="text-2xl font-black text-blue-700">
+
+                Reliable Logistics
+
+              </h3>
+
+              <p className="mt-5 text-gray-600 leading-8">
+
+                Organized storage, loading and transportation for export.
+
+              </p>
+
+            </div>
+
+            <div className="bg-slate-50 rounded-[30px] p-8">
+
+              <h3 className="text-2xl font-black text-blue-700">
+
+                Long-Term Partnerships
+
+              </h3>
+
+              <p className="mt-5 text-gray-600 leading-8">
+
+                Supporting distributors, wholesalers and international partners.
+
+              </p>
+
+            </div>
+
           </div>
 
         </div>
 
-        <div>
-          <Image
-            src="/images/about/design 2.png"
-            alt="MGF Industries PLC"
-            width={700}
-            height={500}
-            className="rounded-3xl shadow-2xl w-full object-cover"
-          />
-        </div>
-
       </section>
 
-      {/* Markets */}
-      <section className="bg-gray-50 py-24">
+      {/* Global Expansion */}
 
-        <div className="max-w-7xl mx-auto px-8">
+      <section className="py-24 bg-slate-50">
 
-          <h2 className="text-5xl font-extrabold text-center tracking-tight text-gray-900">
-  Markets We Serve
-</h2>
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-16 items-center">
 
-          <div className="grid md:grid-cols-3 gap-8 mt-16">
+          <Image
+            src="/images/Gallery/truck.PNG"
+            alt="Transportation"
+            width={700}
+            height={750}
+            className="rounded-[35px] shadow-xl object-cover"
+          />
 
-            <div className="bg-white rounded-3xl shadow-lg p-8">
-              <h3 className="text-2xl font-bold text-blue-700">
-                Domestic Market
-              </h3>
+          <div>
 
-              <p className="mt-4 text-gray-600">
-                Addis Ababa and regional Ethiopian markets through wholesalers,
-                retailers and institutional buyers.
-              </p>
-            </div>
+            <span className="inline-flex rounded-full bg-blue-100 text-blue-700 px-5 py-2 font-semibold">
 
-            <div className="bg-white rounded-3xl shadow-lg p-8">
-              <h3 className="text-2xl font-bold text-blue-700">
-                Export Markets
-              </h3>
+              Global Expansion
 
-              <p className="mt-4 text-gray-600">
-                Eritrea, Djibouti, Somalia and South Sudan with scalable supply
-                capabilities.
-              </p>
-            </div>
+            </span>
 
-            <div className="bg-white rounded-3xl shadow-lg p-8">
-              <h3 className="text-2xl font-bold text-blue-700">
-                Humanitarian Supply
-              </h3>
+            <h2 className="mt-6 text-5xl font-black text-gray-900">
 
-              <p className="mt-4 text-gray-600">
-                NGOs, refugee programs, emergency response teams and relief
-                organizations.
-              </p>
-            </div>
+              Expanding Our International Reach
+
+            </h2>
+
+            <p className="mt-8 text-lg leading-9 text-gray-600">
+
+              As demand for premium bottled drinking water continues
+              to grow, Hi Spring is expanding its export network and
+              building long-term partnerships across regional and
+              international markets.
+
+            </p>
 
           </div>
 
@@ -114,23 +186,36 @@ export default function ExportPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24">
 
-        <div className="max-w-4xl mx-auto text-center px-8">
+      <section className="py-24 bg-blue-700">
 
-          <h2 className="text-4xl font-bold">
-            Let's Grow Together
+        <div className="max-w-5xl mx-auto text-center px-6">
+
+          <h2 className="text-5xl font-black text-white">
+
+            Looking For An Export Partner?
+
           </h2>
 
-          <p className="mt-6 text-gray-600">
-            Contact our sales team to discuss distribution,
-            wholesale purchasing or export opportunities.
+          <p className="mt-8 text-xl text-blue-100 leading-9">
+
+            Contact our export team to discuss distribution,
+            wholesale supply and international business opportunities.
+
           </p>
 
-          <div className="mt-10">
+          <div className="mt-12">
+
             <Link href="/contact">
-              <Button>Request a Quote</Button>
+
+              <Button variant="secondary">
+
+                Contact Our Export Team
+
+              </Button>
+
             </Link>
+
           </div>
 
         </div>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import Button from "@/components/ui/Button";
 
@@ -9,151 +10,149 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-8 py-5">
+    <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-blue-100 shadow-lg">
+
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 h-20 lg:h-24">
+
         {/* Logo */}
-        <Link href="/">
-          <h1 className="cursor-pointer text-3xl font-black text-blue-700">
-            Hi Spring
-          </h1>
+
+        <Link href="/" className="flex items-center gap-3 lg:gap-4">
+
+          <Image
+            src="/logos/logo.PNG"
+            alt="Hi Spring Logo"
+            width={180}
+            height={70}
+            priority
+            className="h-10 sm:h-12 lg:h-14 w-auto object-contain"
+          />
+
+          <div>
+
+            <h1 className="text-xl sm:text-2xl lg:text-3xl font-black text-blue-700 leading-none">
+              Hi Spring
+            </h1>
+
+            <p className="hidden sm:block text-[10px] lg:text-xs tracking-[0.2em] lg:tracking-[0.25em] uppercase text-gray-500 mt-1">
+              MGF Industries PLC
+            </p>
+
+          </div>
+
         </Link>
 
-        {/* Desktop Navigation */}
-        <ul className="hidden lg:flex items-center gap-8 font-medium text-gray-700">
-          <li>
-            <Link
-              href="/"
-              className="transition-all hover:text-blue-700 hover:font-semibold"
-            >
-              Home
-            </Link>
-          </li>
+        {/* Desktop Menu */}
 
-          <li>
-            <Link
-              href="/products"
-              className="transition-all hover:text-blue-700 hover:font-semibold"
-            >
-              Products
-            </Link>
-          </li>
+        <ul className="hidden lg:flex items-center gap-8 font-semibold text-gray-700">
 
-          <li>
-            <Link
-              href="/sustainability"
-              className="transition-all hover:text-blue-700 hover:font-semibold"
-            >
-              Sustainability
-            </Link>
-          </li>
+          {[
+            ["Home", "/"],
+            ["Products", "/products"],
+            ["Manufacturing", "/manufacturing"],
+            ["Sustainability", "/sustainability"],
+            ["Gallery", "/gallery"],
+            ["About", "/about"],
+            ["Contact", "/contact"],
+          ].map(([title, href]) => (
 
-          <li>
-            <Link
-              href="/certifications"
-              className="transition-all hover:text-blue-700 hover:font-semibold"
-            >
-              Certifications
-            </Link>
-          </li>
+            <li key={title}>
 
-          <li>
-            <Link
-              href="/export"
-              className="transition-all hover:text-blue-700 hover:font-semibold"
-            >
-              Export
-            </Link>
-          </li>
+              <Link
+                href={href}
+                className="transition duration-300 hover:text-blue-700 hover:border-b-2 hover:border-blue-700 pb-1"
+              >
+                {title}
+              </Link>
 
-          <li>
-            <Link
-              href="/gallery"
-              className="transition-all hover:text-blue-700 hover:font-semibold"
-            >
-              Gallery
-            </Link>
-          </li>
+            </li>
 
-          <li>
-            <Link
-              href="/about"
-              className="transition-all hover:text-blue-700 hover:font-semibold"
-            >
-              About Us
-            </Link>
-          </li>
+          ))}
 
-          <li>
-            <Link
-              href="/contact"
-              className="transition-all hover:text-blue-700 hover:font-semibold"
-            >
-              Contact
-            </Link>
-          </li>
         </ul>
 
         {/* Desktop Button */}
+
         <div className="hidden lg:block">
+
           <Link href="/contact">
-            <Button>Get a Quote</Button>
+
+            <Button>
+              Get a Quote
+            </Button>
+
           </Link>
+
         </div>
 
         {/* Mobile Menu Button */}
-        <button
-          className="lg:hidden"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-        >
-          {menuOpen ? <X size={34} /> : <Menu size={34} />}
-        </button>
+
+<button
+  type="button"
+  className="lg:hidden p-2 relative z-[100]"
+  onClick={() => {
+    console.log("Menu clicked");
+    setMenuOpen(!menuOpen);
+  }}
+  aria-label="Toggle Menu"
+>
+  {menuOpen ? (
+    <X className="text-blue-700" size={32} />
+  ) : (
+    <Menu className="text-blue-700" size={32} />
+  )}
+</button>
+
       </div>
 
       {/* Mobile Menu */}
+
       {menuOpen && (
-        <div className="border-t border-gray-200 bg-white lg:hidden">
-          <div className="flex flex-col space-y-6 px-8 py-8 text-lg font-medium">
-            <Link href="/" onClick={() => setMenuOpen(false)}>
-              Home
-            </Link>
 
-            <Link href="/products" onClick={() => setMenuOpen(false)}>
-              Products
-            </Link>
+        <div className="lg:hidden bg-white border-t border-blue-100 shadow-lg relative z-[90]">
 
-            <Link href="/sustainability" onClick={() => setMenuOpen(false)}>
-              Sustainability
-            </Link>
+          <div className="flex flex-col px-6 py-6 space-y-5 font-semibold">
 
-            <Link href="/certifications" onClick={() => setMenuOpen(false)}>
-              Certifications
-            </Link>
+            {[
+              ["Home", "/"],
+              ["Products", "/products"],
+              ["Manufacturing", "/manufacturing"],
+              ["Sustainability", "/sustainability"],
+              ["Gallery", "/gallery"],
+              ["About", "/about"],
+              ["Contact", "/contact"],
+            ].map(([title, href]) => (
 
-            <Link href="/export" onClick={() => setMenuOpen(false)}>
-              Export
-            </Link>
-
-            <Link href="/gallery" onClick={() => setMenuOpen(false)}>
-              Gallery
-            </Link>
-
-            <Link href="/about" onClick={() => setMenuOpen(false)}>
-              About Us
-            </Link>
-
-            <Link href="/contact" onClick={() => setMenuOpen(false)}>
-              Contact
-            </Link>
-
-            <div className="pt-4">
-              <Link href="/contact" onClick={() => setMenuOpen(false)}>
-                <Button>Get a Quote</Button>
+              <Link
+                key={title}
+                href={href}
+                onClick={() => setMenuOpen(false)}
+                className="text-gray-700 hover:text-blue-700 transition-colors"
+              >
+                {title}
               </Link>
+
+            ))}
+
+            <div className="pt-2">
+
+              <Link
+                href="/contact"
+                onClick={() => setMenuOpen(false)}
+              >
+                <Button>
+                  Get a Quote
+                </Button>
+
+              </Link>
+
             </div>
+
           </div>
+
         </div>
+
       )}
+
     </nav>
   );
 }

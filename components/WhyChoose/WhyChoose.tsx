@@ -1,116 +1,190 @@
+import Image from "next/image";
+import Link from "next/link";
 import {
-  ShieldCheck,
-  Droplets,
-  Leaf,
-  Globe,
+  CheckCircle2,
+  Building2,
+  Hotel,
+  School,
+  Hospital,
+  Store,
 } from "lucide-react";
+import Button from "@/components/ui/Button";
 
 export default function WhyChoose() {
   return (
-    <section className="py-28 bg-slate-50">
-      <div className="max-w-7xl mx-auto px-8">
+    <section className="py-32 bg-slate-50">
 
-        {/* Section Header */}
-        <div className="text-center max-w-4xl mx-auto">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
-          <p className="uppercase tracking-[0.35em] text-blue-700 font-bold text-sm">
-            WHY HI SPRING
-          </p>
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
 
-          <h2 className="mt-6 text-5xl font-black text-black">
-            More Than Water.
-            <br />
-            A Better Way to Hydrate.
-          </h2>
+          {/* PRODUCT */}
 
-          <p className="mt-8 text-xl text-gray-700 leading-9">
-            Hi Spring combines premium natural mineral water,
-            innovative Non-PVC pouch packaging, and internationally
-            recognized manufacturing standards to deliver a smarter,
-            safer, and more sustainable drinking experience.
-          </p>
+          <div className="relative flex justify-center">
 
-        </div>
+            <div className="absolute w-[520px] h-[520px] rounded-full bg-blue-200 blur-3xl opacity-40"></div>
 
-        {/* Feature Cards */}
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8 mt-20">
-
-          {/* Card 1 */}
-          <div className="bg-white rounded-3xl border border-gray-100 p-10 text-center shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
-
-            <div className="w-20 h-20 mx-auto rounded-full bg-blue-100 flex items-center justify-center">
-              <ShieldCheck size={42} className="text-blue-700" />
-            </div>
-
-            <h3 className="mt-8 text-2xl font-extrabold text-blue-700">
-              Certified Quality
-            </h3>
-
-            <p className="mt-5 text-gray-700 leading-8">
-              Produced under internationally recognized quality
-              and food safety standards to ensure consistent
-              excellence in every pouch.
-            </p>
+            <Image
+  src="/images/Hero/hero.PNG"
+  alt="Hi Spring 19L Water"
+  width={520}
+  height={900}
+  className="w-full max-w-[460px] h-auto rounded-[32px] object-contain drop-shadow-2xl hover:scale-105 transition-all duration-500"
+  priority
+/>
 
           </div>
 
-          {/* Card 2 */}
-          <div className="bg-white rounded-3xl border border-gray-100 p-10 text-center shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+          {/* CONTENT */}
 
-            <div className="w-20 h-20 mx-auto rounded-full bg-green-100 flex items-center justify-center">
-              <Leaf size={42} className="text-green-600" />
-            </div>
+          <div>
 
-            <h3 className="mt-8 text-2xl font-extrabold text-green-600">
-              Eco-Friendly
-            </h3>
+            <span className="inline-flex rounded-full bg-blue-100 text-blue-700 px-5 py-2 font-semibold">
 
-            <p className="mt-5 text-gray-700 leading-8">
-              Innovative Non-PVC pouch packaging helps reduce
-              material usage while supporting a cleaner future.
+              Our Flagship Product
+
+            </span>
+
+            <h2 className="mt-8 text-5xl lg:text-6xl font-black leading-tight text-gray-900">
+
+              Premium
+              <span className="text-blue-700">
+                {" "}19L Bottled
+              </span>
+
+              <br />
+
+              Drinking Water
+
+            </h2>
+
+            <p className="mt-8 text-lg leading-9 text-gray-600">
+
+              Designed for offices, hotels, factories, schools,
+              hospitals and households, our 19L bottled drinking
+              water provides a dependable hydration solution backed
+              by modern purification technology and reliable
+              distribution.
+
             </p>
 
-          </div>
+            <div className="mt-10 space-y-4">
 
-          {/* Card 3 */}
-          <div className="bg-white rounded-3xl border border-gray-100 p-10 text-center shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+  {[
+    "Advanced Reverse Osmosis Purification",
+    "Hygienically Produced",
+    "Ideal for Water Dispensers",
+    "Reliable Bulk Supply",
+    "Cost-Effective Daily Hydration",
+  ].map((item) => (
+    <div
+      key={item}
+      className="flex items-center gap-4 rounded-2xl bg-blue-50 border border-blue-200 px-5 py-4 shadow-sm hover:bg-blue-100 hover:shadow-md transition-all duration-300"
+    >
+      <CheckCircle2 className="text-blue-700 w-6 h-6 flex-shrink-0" />
 
-            <div className="w-20 h-20 mx-auto rounded-full bg-cyan-100 flex items-center justify-center">
-              <Droplets size={42} className="text-cyan-600" />
+      <span className="text-blue-800 font-bold text-lg">
+        {item}
+      </span>
+    </div>
+  ))}
+
+</div>
+
+            <div className="mt-12 flex gap-5">
+
+              <Link href="/contact">
+                <Button>
+                  Request Bulk Quote
+                </Button>
+              </Link>
+
+              <Link href="/products">
+                <Button variant="secondary">
+                  Product Details
+                </Button>
+              </Link>
+
             </div>
-
-            <h3 className="mt-8 text-2xl font-extrabold text-cyan-600">
-              Pure Water
-            </h3>
-
-            <p className="mt-5 text-gray-700 leading-8">
-              Carefully processed and quality-tested to deliver
-              refreshing, safe, and premium drinking water.
-            </p>
-
-          </div>
-
-          {/* Card 4 */}
-          <div className="bg-white rounded-3xl border border-gray-100 p-10 text-center shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
-
-            <div className="w-20 h-20 mx-auto rounded-full bg-indigo-100 flex items-center justify-center">
-              <Globe size={42} className="text-indigo-600" />
-            </div>
-
-            <h3 className="mt-8 text-2xl font-extrabold text-indigo-600">
-              Export Ready
-            </h3>
-
-            <p className="mt-5 text-gray-700 leading-8">
-              Designed to serve wholesalers, institutions,
-              humanitarian organizations, and international markets.
-            </p>
 
           </div>
 
         </div>
+
+        {/* Industries */}
+
+<div className="mt-28">
+
+  <div className="text-center">
+
+    <h3 className="text-4xl font-black text-gray-900">
+      Perfect For Every Industry
+    </h3>
+
+    <p className="mt-5 text-lg text-gray-600">
+      Trusted hydration solutions for every environment.
+    </p>
+
+  </div>
+
+  <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+
+    <div className="rounded-3xl bg-blue-50 border border-blue-100 p-8 text-center shadow-md hover:bg-blue-100 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+
+      <Building2 className="mx-auto text-blue-700" size={42} />
+
+      <h4 className="mt-5 text-xl font-bold text-blue-700">
+        Offices
+      </h4>
+
+    </div>
+
+    <div className="rounded-3xl bg-blue-50 border border-blue-100 p-8 text-center shadow-md hover:bg-blue-100 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+
+      <Hotel className="mx-auto text-blue-700" size={42} />
+
+      <h4 className="mt-5 text-xl font-bold text-blue-700">
+        Hotels
+      </h4>
+
+    </div>
+
+    <div className="rounded-3xl bg-blue-50 border border-blue-100 p-8 text-center shadow-md hover:bg-blue-100 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+
+      <School className="mx-auto text-blue-700" size={42} />
+
+      <h4 className="mt-5 text-xl font-bold text-blue-700">
+        Schools
+      </h4>
+
+    </div>
+
+    <div className="rounded-3xl bg-blue-50 border border-blue-100 p-8 text-center shadow-md hover:bg-blue-100 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+
+      <Hospital className="mx-auto text-blue-700" size={42} />
+
+      <h4 className="mt-5 text-xl font-bold text-blue-700">
+        Hospitals
+      </h4>
+
+    </div>
+
+    <div className="rounded-3xl bg-blue-50 border border-blue-100 p-8 text-center shadow-md hover:bg-blue-100 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+
+      <Store className="mx-auto text-blue-700" size={42} />
+
+      <h4 className="mt-5 text-xl font-bold text-blue-700">
+        Retail
+      </h4>
+
+    </div>
+
+  </div>
+
+</div>
 
       </div>
+
     </section>
   );
 }
