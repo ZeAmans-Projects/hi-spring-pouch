@@ -49,9 +49,11 @@ export default function ContactPage() {
 
                 <Phone className="text-blue-700" />
 
-                <span className="font-semibold">
-                  +251 94 144 5446
-                </span>
+<span className="font-semibold">
+  +251 (095) 465 5555
+  <br />
+  +251 (095) 435 5555
+</span>
 
               </div>
 
@@ -60,7 +62,7 @@ export default function ContactPage() {
                 <Mail className="text-blue-700" />
 
                 <span className="font-semibold">
-                  HiSpring.MGF@gmail.com
+                  HiSpring.info@gmail.com
                 </span>
 
               </div>
