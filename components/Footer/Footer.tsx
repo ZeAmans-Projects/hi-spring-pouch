@@ -133,7 +133,7 @@ export default function Footer() {
 
               <Mail className="text-blue-400 mt-1" size={20} />
 
-              <p>HiSpring.MGF@gmail.com</p>
+              <p>HiSpring.info@gmail.com</p>
 
             </div>
 
@@ -141,7 +141,11 @@ export default function Footer() {
 
               <Phone className="text-blue-400 mt-1" size={20} />
 
-              <p>+251 94 144 5446</p>
+<p>
+  +251 (095) 465 5555
+  <br />
+  +251 (095) 435 5555
+</p>
 
             </div>
 

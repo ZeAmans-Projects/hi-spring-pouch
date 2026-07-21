@@ -126,21 +126,19 @@ export default function ContactPage() {
             <div className="rounded-[30px] bg-slate-50 p-8 shadow-lg">
 
               <Phone
-                className="text-blue-700"
-                size={34}
-              />
+  className="text-blue-700"
+  size={34}
+/>
 
-              <h3 className="mt-6 text-2xl font-bold">
+<h3 className="mt-6 text-2xl font-bold">
+  Phone
+</h3>
 
-                Phone
-
-              </h3>
-
-              <p className="mt-4 leading-8 text-gray-600">
-
-                +251 94 144 5446
-
-              </p>
+<p className="mt-4 leading-8 text-gray-600">
+  +251 (095) 465 5555
+  <br />
+  +251 (095) 435 5555
+</p>
 
             </div>
 
@@ -161,7 +159,7 @@ export default function ContactPage() {
 
               <p className="mt-4 break-all leading-8 text-gray-600">
 
-                HiSpring.MGF@gmail.com
+                HiSpring.info@gmail.com
 
               </p>
 
