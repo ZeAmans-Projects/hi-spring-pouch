@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import {
   MapPin,
@@ -10,6 +13,62 @@ import {
 import Button from "@/components/ui/Button";
 
 export default function ContactPage() {
+  const [loading, setLoading] = useState(false);
+
+const [formData, setFormData] = useState({
+  name: "",
+  company: "",
+  email: "",
+  phone: "",
+  subject: "",
+  message: "",
+});
+
+const handleChange = (
+  e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+) => {
+  setFormData({
+    ...formData,
+    [e.target.name]: e.target.value,
+  });
+};
+
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  console.log("Form submitted");
+
+  setLoading(true);
+
+  try {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (res.ok) {
+      alert("Inquiry sent successfully!");
+
+      setFormData({
+        name: "",
+        company: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: "",
+      });
+    } else {
+      alert("Failed to send inquiry.");
+    }
+  } catch {
+    alert("Something went wrong.");
+  }
+
+  setLoading(false);
+};
   return (
     <main>
 
@@ -241,51 +300,22 @@ export default function ContactPage() {
 
           <div className="bg-white rounded-[35px] border border-gray-200 shadow-2xl p-10">
 
-            <form className="space-y-6">
+            <form
+  onSubmit={(e) => {
+    e.preventDefault();
+    alert("Working!");
+  }}
+>
+  <input
+    type="text"
+    name="name"
+    placeholder="Name"
+  />
 
-              <input
-                type="text"
-                placeholder="Full Name"
-                className="w-full rounded-2xl border-2 border-gray-300 px-5 py-4 text-gray-900 placeholder:text-gray-500 font-medium focus:outline-none focus:border-blue-700 focus:ring-4 focus:ring-blue-200 transition-all"
-              />
-
-              <input
-                type="text"
-                placeholder="Company (Optional)"
-                className="w-full rounded-2xl border-2 border-gray-300 px-5 py-4 text-gray-900 placeholder:text-gray-500 font-medium focus:outline-none focus:border-blue-700 focus:ring-4 focus:ring-blue-200 transition-all"
-              />
-
-              <input
-                type="email"
-                placeholder="Email Address"
-                className="w-full rounded-2xl border-2 border-gray-300 px-5 py-4 text-gray-900 placeholder:text-gray-500 font-medium focus:outline-none focus:border-blue-700 focus:ring-4 focus:ring-blue-200 transition-all"
-              />
-
-              <input
-                type="tel"
-                placeholder="Phone Number"
-                className="w-full rounded-2xl border-2 border-gray-300 px-5 py-4 text-gray-900 placeholder:text-gray-500 font-medium focus:outline-none focus:border-blue-700 focus:ring-4 focus:ring-blue-200 transition-all"
-              />
-
-              <input
-                type="text"
-                placeholder="Subject"
-                className="w-full rounded-2xl border-2 border-gray-300 px-5 py-4 text-gray-900 placeholder:text-gray-500 font-medium focus:outline-none focus:border-blue-700 focus:ring-4 focus:ring-blue-200 transition-all"
-              />
-
-              <textarea
-                rows={7}
-                placeholder="Tell us how we can help..."
-                className="w-full rounded-2xl border-2 border-gray-300 px-5 py-4 text-gray-900 placeholder:text-gray-500 font-medium focus:outline-none focus:border-blue-700 focus:ring-4 focus:ring-blue-200 transition-all resize-none"
-              />
-
-              <Button>
-
-                Send Inquiry
-
-              </Button>
-
-            </form>
+  <button type="submit">
+    Test
+  </button>
+</form>
 
           </div>
 
