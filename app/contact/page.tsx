@@ -36,8 +36,6 @@ const handleChange = (
 const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
 
-  console.log("Form submitted");
-
   setLoading(true);
 
   try {
@@ -49,22 +47,24 @@ const handleSubmit = async (e: React.FormEvent) => {
       body: JSON.stringify(formData),
     });
 
-    if (res.ok) {
-      alert("Inquiry sent successfully!");
-
-      setFormData({
-        name: "",
-        company: "",
-        email: "",
-        phone: "",
-        subject: "",
-        message: "",
-      });
-    } else {
-      alert("Failed to send inquiry.");
+    if (!res.ok) {
+      throw new Error("Failed to send");
     }
-  } catch {
-    alert("Something went wrong.");
+
+    alert("Inquiry sent successfully!");
+
+    setFormData({
+      name: "",
+      company: "",
+      email: "",
+      phone: "",
+      subject: "",
+      message: "",
+    });
+
+  } catch (error) {
+    console.error(error);
+    alert("Something went wrong. Please try again.");
   }
 
   setLoading(false);
@@ -300,23 +300,76 @@ const handleSubmit = async (e: React.FormEvent) => {
 
           <div className="bg-white rounded-[35px] border border-gray-200 shadow-2xl p-10">
 
-            <form
-  onSubmit={(e) => {
-    e.preventDefault();
-    alert("Working!");
-  }}
->
+            <form onSubmit={handleSubmit} className="space-y-6">
+
   <input
     type="text"
     name="name"
-    placeholder="Name"
+    value={formData.name}
+    onChange={handleChange}
+    placeholder="Full Name"
+    required
+    className="w-full rounded-2xl border-2 border-gray-300 px-5 py-4 text-gray-900 placeholder:text-gray-500 font-medium focus:outline-none focus:border-blue-700 focus:ring-4 focus:ring-blue-200 transition-all"
   />
 
-  <button type="submit">
-    Test
-  </button>
-</form>
+  <input
+    type="text"
+    name="company"
+    value={formData.company}
+    onChange={handleChange}
+    placeholder="Company (Optional)"
+    className="w-full rounded-2xl border-2 border-gray-300 px-5 py-4 text-gray-900 placeholder:text-gray-500 font-medium focus:outline-none focus:border-blue-700 focus:ring-4 focus:ring-blue-200 transition-all"
+  />
 
+  <input
+    type="email"
+    name="email"
+    value={formData.email}
+    onChange={handleChange}
+    placeholder="Email Address"
+    required
+    className="w-full rounded-2xl border-2 border-gray-300 px-5 py-4 text-gray-900 placeholder:text-gray-500 font-medium focus:outline-none focus:border-blue-700 focus:ring-4 focus:ring-blue-200 transition-all"
+  />
+
+  <input
+    type="tel"
+    name="phone"
+    value={formData.phone}
+    onChange={handleChange}
+    placeholder="Phone Number"
+    required
+    className="w-full rounded-2xl border-2 border-gray-300 px-5 py-4 text-gray-900 placeholder:text-gray-500 font-medium focus:outline-none focus:border-blue-700 focus:ring-4 focus:ring-blue-200 transition-all"
+  />
+
+  <input
+    type="text"
+    name="subject"
+    value={formData.subject}
+    onChange={handleChange}
+    placeholder="Subject"
+    required
+    className="w-full rounded-2xl border-2 border-gray-300 px-5 py-4 text-gray-900 placeholder:text-gray-500 font-medium focus:outline-none focus:border-blue-700 focus:ring-4 focus:ring-blue-200 transition-all"
+  />
+
+  <textarea
+    name="message"
+    value={formData.message}
+    onChange={handleChange}
+    rows={7}
+    placeholder="Tell us how we can help..."
+    required
+    className="w-full rounded-2xl border-2 border-gray-300 px-5 py-4 text-gray-900 placeholder:text-gray-500 font-medium focus:outline-none focus:border-blue-700 focus:ring-4 focus:ring-blue-200 transition-all resize-none"
+  />
+
+  <button
+    type="submit"
+    disabled={loading}
+    className="w-full rounded-2xl bg-blue-700 py-4 px-6 text-white font-semibold text-lg hover:bg-blue-800 transition-all disabled:opacity-60 disabled:cursor-not-allowed"
+  >
+    {loading ? "Sending..." : "Send Inquiry"}
+  </button>
+
+</form>
           </div>
 
         </div>
